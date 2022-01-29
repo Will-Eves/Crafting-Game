@@ -9,10 +9,11 @@ ITEMFULL sand earth fire white url("Res/Sand.jpg")
 ITEMFULL hill earth earth white url("Res/Hill.jpg")
 
 ITEMFULL energy fire water white url("Res/Energy.jpg")
-ITEMFULL plasma fire air white url("Res/Energy.jpg")
-ITEMFULL inferno fire fire white url("Res/Energy.jpg")
+ITEMFULL plasma fire air white url("Res/Plasma.jpg")
+ITEMFULL inferno fire fire white url("Res/Inferno.jpg")
 
 ITEMFULL cloud air water white url("Res/Cloud.jpg")
-ITEMFULL wind air air white url("Res/Cloud.jpg")
+ITEMFULL wind air air white url("Res/Wind.jpg")
 
 ITEMFULL pond water water white url("Res/Pond.jpg")
+
