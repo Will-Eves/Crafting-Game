@@ -9,7 +9,7 @@ function addItem(name, color="white"){
     items[name] = [name, color];
 }
 
-function addRecipie(name, items){
+function addRecipe(name, items){
     recipies.push([name, items]);
 }
 
@@ -70,8 +70,8 @@ function LoadGame(name) {
             if(gamedata[i] == "ITEM"){
                 addItem(gamedata[i + 1], gamedata[i + 2]);
                 addToI += 2;
-            }else if(gamedata[i] == "RECIPIE"){
-                addRecipie(gamedata[i + 1], [gamedata[i + 2], gamedata[i + 3]]);
+            }else if(gamedata[i] == "RECIPE"){
+                addRecipe(gamedata[i + 1], [gamedata[i + 2], gamedata[i + 3]]);
                 addToI += 3;
             }
 
@@ -88,27 +88,6 @@ window.onload = function(){
     inventory["water"] = 1;
     inventory["fire"] = 1;
     inventory["earth"] = 1;
-
-    /*
-    addItem("air");
-    addItem("water");
-    addItem("fire");
-    addItem("earth");
-    
-    addRecipie("mud", ["water", "earth"]);
-    addRecipie("dust", ["fire", "earth"]);
-    addRecipie("sand", ["air", "earth"]);
-    addRecipie("hill", ["earth", "earth"]);
-
-    addRecipie("energy", ["water", "fire"]);
-    addRecipie("plasma", ["air", "fire"]);
-    addRecipie("inferno", ["fire", "fire"]);
-
-    addRecipie("cloud", ["water", "air"]);
-    addRecipie("wind", ["air", "air"]);
-
-    addRecipie("pond", ["water", "water"]);
-    */
     
     inventoryElement = document.getElementById("inventory");
     craftElement = document.getElementById("craft");
