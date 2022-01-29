@@ -1,42 +1,18 @@
-ITEM earth brown
-ITEM water blue
-ITEM fire red
-ITEM air lightcyan
-DECORATE earth url("Res/Earth.jpg")
-DECORATE water url("Res/Water.jpg")
-DECORATE fire url("Res/Fire.jpg")
-DECORATE air url("Res/Air.jpg")
+ITEMFULL earth none none white url("Res/Earth.jpg")
+ITEMFULL water none none white url("Res/Water.jpg")
+ITEMFULL fire none none white url("Res/Fire.jpg")
+ITEMFULL air none none white url("Res/Air.jpg")
 
-ITEM mud brown
-ITEM dust lightsalmon
-ITEM sand yellow
-ITEM hill brown
-RECIPE mud earth water
-RECIPE dust earth air
-RECIPE sand earth fire
-RECIPE hill earth earth
-DECORATE mud url("Res/Mud.jpg")
-DECORATE dust url("Res/Dust.jpg")
-DECORATE sand url("Res/Sand.jpg")
-DECORATE hill url("Res/Hill.jpg")
+ITEMFULL mud earth water white url("Res/Mud.jpg")
+ITEMFULL dust earth air white url("Res/Dust.jpg")
+ITEMFULL sand earth fire white url("Res/Sand.jpg")
+ITEMFULL hill earth earth white url("Res/Hill.jpg")
 
-ITEM energy yellow
-ITEM plasma white
-ITEM inferno red
-RECIPE energy fire water
-RECIPE plasma fire air
-RECIPE inferno fire fire
-DECORATE energy url("Res/Energy.jpg")
-DECORATE plasma url("Res/Plasma.jpg")
-DECORATE inferno url("Res/Inferno.jpg")
+ITEMFULL energy fire water white url("Res/Energy.jpg")
+ITEMFULL plasma fire air white url("Res/Energy.jpg")
+ITEMFULL inferno fire fire white url("Res/Energy.jpg")
 
-ITEM cloud cyan
-ITEM wind lightcyan
-RECIPE cloud air water
-RECIPE wind air air
-DECORATE cloud url("Res/Cloud.jpg")
-DECORATE wind url("Res/Wind.jpg")
+ITEMFULL cloud air water white url("Res/Cloud.jpg")
+ITEMFULL wind air air white url("Res/Cloud.jpg")
 
-ITEM pond blue
-RECIPE pond water water
-DECORATE pond url("Res/Pond.jpg")
+ITEMFULL pond water water white url("Res/Pond.jpg")

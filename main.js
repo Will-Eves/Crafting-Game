@@ -93,6 +93,12 @@ function LoadGame(name) {
             }else if(gamedata[i] == "DECORATE"){
                 decorateItem(gamedata[i + 1], gamedata[i + 2]);
                 addToI += 2;
+            }else if(gamedata[i] == "ITEMFULL"){
+                //!item wood earth energy brown none
+                addItem(gamedata[i + 1], gamedata[i + 4]);
+                addRecipe(gamedata[i + 1], [gamedata[i + 2], gamedata[i + 3]]);
+                decorateItem(gamedata[i + 1], gamedata[i + 5]);
+                addToI += 5;
             }
 
             i += addToI;
