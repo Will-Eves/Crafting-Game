@@ -5,8 +5,8 @@ var inventory = [];
 
 var gamedata;
 
-function addItem(name){
-    items[name] = [name];
+function addItem(name, color="white"){
+    items[name] = [name, color];
 }
 
 function addRecipie(name, items){
@@ -46,34 +46,48 @@ var inventoryElement;
 var craftElement;
 
 //Data Handling
-function readTextFile(name) {
-    var rawFile = new XMLHttpRequest();
-    var out;
-    rawFile.open("GET", name, true);
-    rawFile.onreadystatechange = function() {
-        if (rawFile.readyState === 4) {
-            var allText = rawFile.responseText;
-            out = allText;
+function LoadGame(name) {
+    fetch(name)
+    .then(response => response.text())
+    .then(data => {
+        //Parse the File
+        var dat = data.split(' ');
+        var gamedata = [];
+        for(var i = 0; i < dat.length; i++){
+            var ind = dat[i].split('\n');
+            for(var j = 0; j < ind.length; j++){
+                gamedata.push(ind[j]);
+            }
         }
-    }
-    rawFile.send();
-    return out;
+
+        console.log(gamedata);
+
+        //Create the Objects
+        var i = 0;
+        while(i < gamedata.length){
+            if(gamedata[i] == "ITEM"){
+                i += 2;
+            }
+
+            i++;
+        }
+    });
 }
 
 //Load Game
 window.onload = function(){
-    var text = readTextFile("data.gamdat");
-    console.log(text);
-
-    addItem("air");
-    addItem("water");
-    addItem("fire");
-    addItem("earth");
+    LoadGame("https://raw.githubusercontent.com/Will-Eves/Crafting-Game/main/data.gamdat");
 
     inventory["air"] = 1;
     inventory["water"] = 1;
     inventory["fire"] = 1;
     inventory["earth"] = 1;
+
+    /*
+    addItem("air");
+    addItem("water");
+    addItem("fire");
+    addItem("earth");
     
     addRecipie("mud", ["water", "earth"]);
     addRecipie("dust", ["fire", "earth"]);
@@ -88,6 +102,7 @@ window.onload = function(){
     addRecipie("wind", ["air", "air"]);
 
     addRecipie("pond", ["water", "water"]);
+    */
     
     inventoryElement = document.getElementById("inventory");
     craftElement = document.getElementById("craft");
@@ -130,6 +145,7 @@ function drop(e){
                 element.setAttribute("ondragstart", "drag(event)");
                 element.setAttribute("name", "item"); 
                 element.innerText = c;
+                element.style="background-color:" + items[c][1] + ";";
                 inventoryElement.appendChild(element);
             }
             
