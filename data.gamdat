@@ -2,18 +2,23 @@ ITEM earth brown
 ITEM water blue
 ITEM fire red
 ITEM air lightcyan
-DECORATE earth url("https://toppng.com/uploads/preview/dirt-png-11552295074ji8phrjxi5.png")
-DECORATE water url("https://www.pngall.com/wp-content/uploads/5/Blue-Splash-Water-PNG-Free-Image.png")
-DECORATE fire url("https://www.freeiconspng.com/uploads/download-png-image-fire-png-image-3.png")
+DECORATE earth url("Res/Earth.jpg")
+DECORATE water url("Res/Water.jpg")
+DECORATE fire url("Res/Fire.jpg")
+DECORATE air url("Res/Air.jpg")
 
 ITEM mud brown
 ITEM dust lightsalmon
 ITEM sand yellow
 ITEM hill brown
 RECIPE mud earth water
-RECIPE dust earth fire
-RECIPE sand earth air
+RECIPE dust earth air
+RECIPE sand earth fire
 RECIPE hill earth earth
+DECORATE mud url("Res/Mud.jpg")
+DECORATE dust url("Res/Dust.jpg")
+DECORATE sand url("Res/Sand.jpg")
+DECORATE hill url("Res/Hill.jpg")
 
 ITEM energy yellow
 ITEM plasma white
@@ -21,11 +26,17 @@ ITEM inferno red
 RECIPE energy fire water
 RECIPE plasma fire air
 RECIPE inferno fire fire
+DECORATE energy url("Res/Energy.jpg")
+DECORATE plasma url("Res/Plasma.jpg")
+DECORATE inferno url("Res/Inferno.jpg")
 
 ITEM cloud cyan
 ITEM wind lightcyan
 RECIPE cloud air water
 RECIPE wind air air
+DECORATE cloud url("Res/Cloud.jpg")
+DECORATE wind url("Res/Wind.jpg")
 
 ITEM pond blue
 RECIPE pond water water
+DECORATE pond url("Res/Pond.jpg")
