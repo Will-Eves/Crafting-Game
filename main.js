@@ -45,7 +45,26 @@ function craft(items){
 var inventoryElement;
 var craftElement;
 
+//Data Handling
+function readTextFile(name) {
+    var rawFile = new XMLHttpRequest();
+    var out;
+    rawFile.open("GET", name, true);
+    rawFile.onreadystatechange = function() {
+        if (rawFile.readyState === 4) {
+            var allText = rawFile.responseText;
+            out = allText;
+        }
+    }
+    rawFile.send();
+    return out;
+}
+
+//Load Game
 window.onload = function(){
+    var text = readTextFile(".gamedata");
+    console.log(text);
+
     addItem("air");
     addItem("water");
     addItem("fire");
@@ -72,8 +91,6 @@ window.onload = function(){
     
     inventoryElement = document.getElementById("inventory");
     craftElement = document.getElementById("craft");
-
-    console.log(document.getElementById("gamedata").getAttribute('data-id'));
 }
 
 //Drag Handling
