@@ -4,7 +4,7 @@ ITEM fire red
 ITEM air lightcyan
 
 ITEM mud brown
-ITEM dust lightbrown
+ITEM dust lightsalmon
 ITEM sand yellow
 ITEM hill brown
 RECIPE mud earth water
@@ -13,7 +13,7 @@ RECIPE sand earth air
 RECIPE hill earth earth
 
 ITEM energy yellow
-ITEM plasma fire air
+ITEM plasma white
 ITEM inferno red
 RECIPE energy fire water
 RECIPE plasma fire air
