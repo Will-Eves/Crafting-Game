@@ -6,7 +6,11 @@ var inventory = [];
 var gamedata;
 
 function addItem(name, color="white"){
-    items[name] = [name, color];
+    items[name] = [name, color, "none"];
+}
+
+function decorateItem(name, decoration){
+    items[name][2] = decoration;
 }
 
 function addRecipe(name, items){
@@ -60,8 +64,6 @@ function LoadGame(name) {
             }
         }
 
-        console.log(gamedata);
-
         //Create the Objects
         var i = 0;
         while(i < gamedata.length){
@@ -73,6 +75,9 @@ function LoadGame(name) {
             }else if(gamedata[i] == "RECIPE"){
                 addRecipe(gamedata[i + 1], [gamedata[i + 2], gamedata[i + 3]]);
                 addToI += 3;
+            }else if(gamedata[i] == "DECORATE"){
+                decorateItem(gamedata[i + 1], gamedata[i + 2]);
+                addToI += 2;
             }
 
             i += addToI;
@@ -130,7 +135,7 @@ function drop(e){
                 element.setAttribute("ondragstart", "drag(event)");
                 element.setAttribute("name", "item"); 
                 element.innerText = c;
-                element.style="background-color:" + items[c][1] + ";";
+                element.style="background-color:" + items[c][1] + ";background-image:" + items[c][2] + ";";
                 inventoryElement.appendChild(element);
             }
             

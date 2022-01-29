@@ -2,6 +2,7 @@ ITEM earth brown
 ITEM water blue
 ITEM fire red
 ITEM air lightcyan
+DECORATE fire url("https://www.freeiconspng.com/uploads/download-png-image-fire-png-image-3.png")
 
 ITEM mud brown
 ITEM dust lightsalmon
