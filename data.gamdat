@@ -4,5 +4,25 @@ ITEM fire red
 ITEM air lightcyan
 
 ITEM mud brown
-
+ITEM dust lightbrown
+ITEM sand yellow
+ITEM hill brown
 RECIPIE mud earth water
+RECIPIE dust earth fire
+RECIPIE sand earth air
+RECIPIE hill earth earth
+
+ITEM energy yellow
+ITEM plasma fire air
+ITEM inferno red
+RECIPIE energy fire water
+RECIPIE plasma fire air
+RECIPIE inferno fire fire
+
+ITEM cloud cyan
+ITEM wind lightcyan
+RECIPIE cloud air water
+RECIPIE wind air air
+
+ITEM pond blue
+RECIPIE pond water water
