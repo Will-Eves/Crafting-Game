@@ -49,6 +49,19 @@ function craft(items){
 var inventoryElement;
 var craftElement;
 
+//Item Creation
+function addToInventory(name){
+    var element = document.createElement("div");
+    element.id = name;
+    element.classList.add("image");
+    element.draggable = true;
+    element.setAttribute("ondragstart", "drag(event)");
+    element.setAttribute("name", "item"); 
+    element.innerText = name;
+    element.style = "background-color:" + items[name][1] + ";background-image:" + items[name][2] + ";";
+    inventoryElement.appendChild(element);
+}
+
 //Data Handling
 function LoadGame(name) {
     fetch(name)
@@ -63,6 +76,8 @@ function LoadGame(name) {
                 gamedata.push(ind[j]);
             }
         }
+
+        console.log(gamedata);
 
         //Create the Objects
         var i = 0;
@@ -82,17 +97,22 @@ function LoadGame(name) {
 
             i += addToI;
         }
+
+        inventory["earth"] = 1;
+        inventory["water"] = 1;
+        inventory["fire"] = 1;
+        inventory["air"] = 1;
+
+        addToInventory("earth");
+        addToInventory("water");
+        addToInventory("fire");
+        addToInventory("air");
     });
 }
 
 //Load Game
 window.onload = function(){
     LoadGame("https://raw.githubusercontent.com/Will-Eves/Crafting-Game/main/data.gamdat");
-
-    inventory["air"] = 1;
-    inventory["water"] = 1;
-    inventory["fire"] = 1;
-    inventory["earth"] = 1;
     
     inventoryElement = document.getElementById("inventory");
     craftElement = document.getElementById("craft");
@@ -128,15 +148,7 @@ function drop(e){
         var c = craft(names);
         if(c != "None"){
             if(inventory[c] == 1){
-                var element = document.createElement("div");
-                element.id = c;
-                element.classList.add("image");
-                element.draggable = true;
-                element.setAttribute("ondragstart", "drag(event)");
-                element.setAttribute("name", "item"); 
-                element.innerText = c;
-                element.style="background-color:" + items[c][1] + ";background-image:" + items[c][2] + ";";
-                inventoryElement.appendChild(element);
+                addToInventory(c);
             }
             
             var len = craftElements.length;
