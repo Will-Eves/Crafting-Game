@@ -65,11 +65,17 @@ function LoadGame(name) {
         //Create the Objects
         var i = 0;
         while(i < gamedata.length){
+            var addToI = 1;
+
             if(gamedata[i] == "ITEM"){
-                i += 2;
+                addItem(gamedata[i + 1], gamedata[i + 2]);
+                addToI += 2;
+            }else if(gamedata[i] == "RECIPIE"){
+                addRecipie(gamedata[i + 1], [gamedata[i + 2], gamedata[i + 3]]);
+                addToI += 3;
             }
 
-            i++;
+            i += addToI;
         }
     });
 }
