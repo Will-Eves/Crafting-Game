@@ -58,7 +58,7 @@ function addToInventory(name){
     element.setAttribute("ondragstart", "drag(event)");
     element.setAttribute("name", "item"); 
     element.innerText = name;
-    element.style = "background-color:" + items[name][1] + ";background-image:" + items[name][2] + ";";
+    element.style = "background-color:" + items[name][1] + ";background-image:" + items[name][2] + ";background-repeat:no-repeat;background-size:cover;";
     inventoryElement.appendChild(element);
 }
 

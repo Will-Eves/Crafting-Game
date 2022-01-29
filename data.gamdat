@@ -2,6 +2,8 @@ ITEM earth brown
 ITEM water blue
 ITEM fire red
 ITEM air lightcyan
+DECORATE earth url("https://toppng.com/uploads/preview/dirt-png-11552295074ji8phrjxi5.png")
+DECORATE water url("https://www.pngall.com/wp-content/uploads/5/Blue-Splash-Water-PNG-Free-Image.png")
 DECORATE fire url("https://www.freeiconspng.com/uploads/download-png-image-fire-png-image-3.png")
 
 ITEM mud brown
