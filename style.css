@@ -1,0 +1,38 @@
+body{
+    margin: 0px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.craft{
+    background-color: black;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    transform: Translate(50vw, 75vh) Translate(-100px, -100px);
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.inventory{
+    background-color: black;
+    position: absolute;
+    width: 95vw;
+    height: 50vh;
+    transform: Translate(2.5vw, 2.5vw);
+    text-align: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.image{
+    background-color: gray;
+    width: 180px;
+    height: 180px;
+    margin: 10px;
+    text-align: center;
+    display: inline-block;
+    font-size: 25px;
+}
