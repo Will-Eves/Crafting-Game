@@ -62,7 +62,7 @@ function readTextFile(name) {
 
 //Load Game
 window.onload = function(){
-    var text = readTextFile(".gamedata");
+    var text = readTextFile("data.gamdat");
     console.log(text);
 
     addItem("air");
