@@ -24,6 +24,9 @@ footer{
     margin-bottom: 10px;
     border-width: 10px;
     border-radius: 10px;
+    background-image: url("Res/CraftingArea.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .inventory{
@@ -39,6 +42,8 @@ footer{
     overflow-y: auto;
     border-width: 10px;
     border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .image{
@@ -51,4 +56,6 @@ footer{
     font-size: 35px;
     border-width: 10px;
     border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

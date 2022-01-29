@@ -58,7 +58,7 @@ function addToInventory(name){
     element.setAttribute("ondragstart", "drag(event)");
     element.setAttribute("name", "item"); 
     element.innerText = name;
-    element.style = "background-color:" + items[name][1] + ";background-image:" + items[name][2] + ";background-repeat:no-repeat;background-size:cover;";
+    element.style = "background-color:" + items[name][1] + ";background-image:" + items[name][2] + ";";
     inventoryElement.appendChild(element);
 }
 
@@ -150,7 +150,8 @@ function drop(e){
             if(inventory[c] == 1){
                 addToInventory(c);
             }
-            
+        }
+        if(craftElements.length > 1){
             var len = craftElements.length;
             for(var i = 0; i < len; i++){
                 inventoryElement.appendChild(craftElements[i]);
