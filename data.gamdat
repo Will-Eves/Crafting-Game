@@ -16,4 +16,3 @@ ITEMFULL cloud air water white url("Res/Cloud.jpg")
 ITEMFULL wind air air white url("Res/Wind.jpg")
 
 ITEMFULL pond water water white url("Res/Pond.jpg") 
-ITEMFULL test fire energy red none
