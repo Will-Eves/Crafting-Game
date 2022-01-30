@@ -17,5 +17,3 @@ ITEMFULL wind air air white url("Res/Wind.jpg")
 
 ITEMFULL pond water water white url("Res/Pond.jpg")
 
-ITEMFULL void plasma energy white url("Res/Energy/jpg")
-ITEMFULL life earth energy white none 
