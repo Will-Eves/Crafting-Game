@@ -125,6 +125,12 @@ window.onload = function(){
     
     inventoryElement = document.getElementById("inventory");
     craftElement = document.getElementById("craft");
+    
+    if(window.innerWidth < window.innerHeight){
+        document.getElementById("style").href = "mobilestyle.css";
+    }else{
+        document.getElementById("style").href = "style.css";
+    }
 }
 
 window.onresize = function(){
