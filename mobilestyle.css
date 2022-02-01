@@ -1,0 +1,61 @@
+body{
+    font-family: Tahoma, sans-serif;
+    margin: 0px;
+    overflow: hidden;
+    text-align: center;
+}
+
+footer{
+    font-size: 20px;
+    width: 100vw;
+    height: 50px;
+    text-align: left;
+    position: absolute;
+    transform: Translate(0vw, 100vh) Translate(0vw, -50px);
+}
+
+.craft{
+    background-color: black;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    transform: Translate(50vw, 75vh) Translate(-100px, -100px);
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-width: 10px;
+    border-radius: 10px;
+    background-image: url("Res/CraftingArea.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.inventory{
+    background-color: black;
+    position: absolute;
+    width: 95vw;
+    height: 50vh;
+    transform: Translate(2.5vw, 2.5vw);
+    text-align: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-width: 10px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.image{
+    background-color: gray;
+    width: 90px;
+    height: 90px;
+    margin: 10px;
+    text-align: center;
+    display: inline-block;
+    font-size: 17.5px;
+    border-width: 5px;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

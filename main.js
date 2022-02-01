@@ -127,6 +127,14 @@ window.onload = function(){
     craftElement = document.getElementById("craft");
 }
 
+window.onresize = function(){
+    if(window.innerWidth < window.innerHeight){
+        document.getElementById("style").href = "mobilestyle.css";
+    }else{
+        document.getElementById("style").href = "style.css";
+    }
+}
+
 //Drag Handling
 function allowDrop(e){
     e.preventDefault();
