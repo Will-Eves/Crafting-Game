@@ -17,3 +17,19 @@ ITEMFULL wind air air white url("Res/Wind.jpg")
 
 ITEMFULL pond water water white url("Res/Pond.jpg")
 
+
+ITEMFULL brick fire mud #700505 none 
+ITEMFULL sulfur sand fire #aa8913 none 
+ITEMFULL lake pond pond #0040ff none 
+ITEMFULL volcano hill energy #905809 none 
+ITEMFULL sun plasma plasma #dcd504 none 
+ITEMFULL thunder cloud energy #382e2e none 
+ITEMFULL beach sand water #fffb80 none 
+ITEMFULL sea lake lake #062ef4 none 
+ITEMFULL lava earth inferno #ff7300 none 
+ITEMFULL ocean sea sea #009dff none
+ITEMFULL obsidian lava water #191414 none 
+ITEMFULL clay mud sand #5b2f06 none 
+ITEMFULL waves water energy #12adaf none 
+ITEMFULL color mud sulfur #224a5d none 
+ITEMFULL eruption volcano energy #441303 none 
