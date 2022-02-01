@@ -55,6 +55,9 @@ function addToInventory(name){
     element.id = name;
     element.classList.add("image");
     element.draggable = true;
+    element.addEventListener("touchstart", function(e){
+        click(e);
+    }, false);
     element.setAttribute("ondragstart", "drag(event)");
     element.setAttribute("name", "item"); 
     element.innerText = name;
@@ -158,11 +161,36 @@ function drop(e){
             }
         }
         if(craftElements.length > 1){
-            var len = craftElements.length;
-            for(var i = 0; i < len; i++){
-                inventoryElement.appendChild(craftElements[i]);
-                i++;
+            for(var i = 0; i < craftElement.childNodes.length; i++){
+                inventoryElement.appendChild(craftElement.childNodes[i]);
             }
+        }
+    }
+}
+
+function click(e){
+    if(e.target.parentElement == craftElement){
+        inventoryElement.appendChild(e.target);
+        return;
+    }
+    craftElement.appendChild(e.target);
+    var craftElements = [];
+    for(var i = 0; i < craftElement.childNodes.length; i++){
+        craftElements.push(craftElement.childNodes[i]);
+    }
+    var names = [];
+    for(var i = 0; i < craftElements.length; i++){
+        names.push(craftElements[i].id);
+    }
+    var c = craft(names);
+    if(c != "None"){
+        if(inventory[c] == 1){
+            addToInventory(c);
+        }
+    }
+    if(craftElements.length > 1){
+        for(var i = 0; i < craftElement.childNodes.length; i++){
+            inventoryElement.appendChild(craftElement.childNodes[i]);
         }
     }
 }
